@@ -14,5 +14,4 @@ router.get("/", getAllBookings);
 router.get("/user/:phone", getUserBookings);
 
 router.delete("/:id", deleteBooking);
-
 module.exports = router;

@@ -16,7 +16,15 @@ const createBooking = async (req, res, next) => {
       recurringDays,
     } = req.body;
 
-    if (!userName || !userPhone || !type || !itemId || !itemName || !startDate || !endDate) {
+    if (
+      !userName ||
+      !userPhone ||
+      !type ||
+      !itemId ||
+      !itemName ||
+      !startDate ||
+      !endDate
+    ) {
       return res.status(400).json({
         success: false,
         message: "Please provide all required fields",
